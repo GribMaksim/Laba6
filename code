@@ -37,7 +37,25 @@ void Print()
 	}
 }
 
+void Search()
+{
+elem* h;
+char flag;
 
+h = head;
+flag = true;
+
+while (h->link != NULL && flag)
+{
+if (h->inf < h->link->inf)
+flag = false;
+h = h->link;
+}
+if (flag)
+cout « "Elementi uporyadochenni" « endl;
+else cout « "Elementi ne uporyadochenni" « endl;
+
+}
 
 void Delete()
 {
